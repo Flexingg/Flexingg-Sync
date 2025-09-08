@@ -19,6 +19,5 @@ services:
     volumes:
       - ./db:/data/db
     container_name: hcgateway_db
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
+    env_file:
+      - ./api/.env
