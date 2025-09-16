@@ -1,11 +1,10 @@
-
 services:
   api:
-    image: ghcr.io/shuchirj/hcgateway:latest
+    build: .
     ports:
-      - "6644:6644"
+      - "1235:1235"
     env_file:
-      - ./api/.env
+      - ./stack.env
     container_name: hcgateway_api
     restart: always
     volumes:
@@ -20,4 +19,4 @@ services:
       - ./db:/data/db
     container_name: hcgateway_db
     env_file:
-      - ./api/.env
+      - ./stack.env

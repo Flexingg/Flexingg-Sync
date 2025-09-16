@@ -70,3 +70,4 @@ flask_session/
 service-account.json
 /api/service-account.json
 */service-account.json
+/db/*
